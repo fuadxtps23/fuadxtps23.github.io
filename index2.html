@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Biodata & portfolio of Fuad (@fuadxtps23) — fetched live from GitHub.">
+  <title>Fuad · biodata</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-icon"><i class="nf nf-fa-github_alt"></i></span>
+        <span class="brand-text">fuad<b>xtps23</b></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active"><i class="nf nf-fa-home"></i> Home</a></li>
+        <li><a href="#repos" class="nav-link"><i class="nf nf-oct-repo"></i> Repos</a></li>
+        <li>
+          <a href="https://github.com/fuadxtps23" target="_blank" rel="noopener" class="nav-cta">
+            <i class="nf nf-fa-github"></i> GitHub
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <div class="hero-avatar-wrap">
+          <img class="hero-avatar" id="avatar" alt="avatar" src="">
+          <div class="avatar-status"><i class="nf nf-fa-terminal"></i></div>
+        </div>
+        <p class="hero-kicker"><i class="nf nf-md-snowflake"></i> winter in here · profile from github <i class="nf nf-md-snowflake"></i></p>
+        <h1 class="hero-name" id="name">Loading<span class="cursor">_</span></h1>
+        <p class="hero-bio" id="bio"></p>
+        <div class="hero-meta" id="heroMeta"></div>
+        <div class="hero-stats" id="heroStats">
+          <div class="stat-card"><i class="nf nf-fa-user"></i><span class="stat-num">–</span><span class="stat-label">followers</span></div>
+          <div class="stat-card"><i class="nf nf-fa-user"></i><span class="stat-num">–</span><span class="stat-label">following</span></div>
+          <div class="stat-card"><i class="nf nf-oct-repo"></i><span class="stat-num">–</span><span class="stat-label">public repos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="readme-section">
+      <div class="section-head">
+        <h2><i class="nf nf-cod-markdown"></i> About me · README</h2>
+        <button class="icon-btn" id="refreshReadme" title="Refresh README"><i class="nf nf-fa-refresh"></i></button>
+      </div>
+      <div class="terminal-card">
+        <div class="terminal-bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title"><i class="nf nf-cod-markdown"></i> fuadxtps23 / README.md</span>
+          <span class="terminal-badge">markdown</span>
+        </div>
+        <div class="terminal-body" id="readme">
+          <div class="loading"><i class="nf nf-cod-loading spin"></i> fetching README.md from github…</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="repos">
+      <div class="section-head">
+        <h2><i class="nf nf-oct-repo"></i> Repositories</h2>
+        <span class="repo-count" id="repoCount"></span>
+      </div>
+
+      <div class="repo-toolbar">
+        <div class="search-box">
+          <i class="nf nf-fa-search"></i>
+          <input type="text" id="searchInput" placeholder="search repos…">
+        </div>
+        <select id="sortSelect" class="sort-select">
+          <option value="updated">sort: recently updated</option>
+          <option value="stars">sort: most stars</option>
+          <option value="name">sort: name</option>
+          <option value="language">sort: language</option>
+        </select>
+      </div>
+
+      <div class="loading" id="repoLoading"><i class="nf nf-cod-loading spin"></i> fetching repos from github…</div>
+      <div class="error" id="repoError" hidden><i class="nf nf-fa-bug"></i> <span id="repoErrorMsg"></span></div>
+
+      <div class="repo-grid" id="repoGrid"></div>
+      <div class="empty" id="repoEmpty" hidden><i class="nf nf-fa-search"></i> no repos match your search.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p><i class="nf nf-fa-heart"></i> built with html, css &amp; js · data from the <a href="https://docs.github.com/en/rest" target="_blank" rel="noopener">github rest api</a></p>
+    <p class="footer-sub">nerd fonts icons · live data from the github rest api</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
